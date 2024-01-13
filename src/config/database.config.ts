@@ -13,6 +13,12 @@ export const databaseConfig: SequelizeModuleOptions = {
   autoLoadModels: true, // автоматически загружать модели из указанной директории
   synchronize: true, // автоматически создавать таблицы при запуске приложения (важно только для разработки)
   models: [],
+  define: {
+    timestamps: true, // включить временные метки updatedAt и createdAt
+    underscored: true, // использовать стиль подчеркивания для именования колонок
+    charset: 'utf8',
+    collate: 'utf8_general_ci',
+  },
 };
 
 export const databaseConfigModule = ConfigModule.forRoot({
