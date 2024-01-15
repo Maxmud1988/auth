@@ -6,7 +6,7 @@ import { Category } from 'src/modules/category/model/category.model';
 @Table
 export class User extends Model {
   @Column
-  firstName;
+  firstName: string;
 
   @Column
   userName: string;
