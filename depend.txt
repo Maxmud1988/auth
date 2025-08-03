@@ -51,5 +51,7 @@ Configure
   npm install prisma --save-dev
   npx prisma
   npx prisma init
+  npx prisma generate
 
-  
+Конфигурация
+  npm i --save @nestjs/config
