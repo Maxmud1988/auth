@@ -12,6 +12,7 @@ async function bootstrap() {
   await app.listen(port)
     console.log(`Application is running on: http://localhost:${port}`);
     console.log('NODE_ENV =', process.env.NODE_ENV);
+    console.log('NODE_ENV =', process.env.NODE_ENV);
   }
   
   bootstrap();
