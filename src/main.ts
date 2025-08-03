@@ -6,9 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const configService = app.get(ConfigService);
-  const port: number = configService.getOrThrow<number>('PORT', {
-    infer: true,
-  });
+  const rawPort = configService.getOrThrow<string>('PORT', { infer: true });
+  const port: number = Number(rawPort);
 
   await app.listen(port);
   console.log(`Application is running on: http://localhost:${port}`);
