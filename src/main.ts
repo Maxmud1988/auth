@@ -9,10 +9,11 @@ async function bootstrap() {
   const port: number = configService.getOrThrow<number>('PORT', {
     infer: true,
   });
-  await app.listen(port)
-    console.log(`Application is running on: http://localhost:${port}`);
-    console.log('NODE_ENV =', process.env.NODE_ENV);
-    console.log('NODE_ENV =', process.env.NODE_ENV);
-  }
-  
-  bootstrap();
+
+  await app.listen(port);
+  console.log(`Application is running on: http://localhost:${port}`);
+  console.log('NODE_ENV =', process.env.NODE_ENV);
+}
+
+// ✅ Добавлен void для подавления линтеров
+void bootstrap();
