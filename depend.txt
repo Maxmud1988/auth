@@ -1,0 +1,8 @@
+sozdat ssh 
+ssh-keygen -t ed25519 -C "m.xudoyberdiev88@gmail.com"
+После этого создадим новый публичный ключ:
+cat ~/.ssh/id_ed25519.pub
+    sh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK+ReOa/vsUn5aCmTNlNUss1nqIgPOHFlHuWFPTvwrhV m.xudoyberdiev88@fmail.com
+ proverka SSH-ключ:
+  ssh -T git@github.com
+    Hi Maxmud1988! You've successfully authenticated, but GitHub does not provide shell access.
